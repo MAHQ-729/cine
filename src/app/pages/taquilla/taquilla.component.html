@@ -1,0 +1,19 @@
+<div class="grid grid-cols-3 my-5 gap-3">
+  @for (pelicula of peliculas(); track pelicula.titulo) {
+    <div class="card bg-base-300 w-96 shadow-sm">
+      <figure>
+        <img class="w-full h-140 object-cover"
+          src="{{pelicula.poster}}"
+          alt="Poster" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">{{pelicula.titulo}}</h2>
+        <p class="truncate">{{pelicula.sinopsis}}</p>
+        <div class="card-actions justify-end">
+          <a class="btn btn-primary" href="{{pelicula.trailer}}">ver trailer</a>
+          <button class="btn btn-primary">ver horarios</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>
